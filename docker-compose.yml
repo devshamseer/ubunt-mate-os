@@ -13,7 +13,7 @@ services:
       - SUBFOLDER=/ #optional
       - TITLE=Webtop #optional
     volumes:
-      - Dockeros/data:/config
+      - ./Dockerfile/Dockeros/data:/config
    #   - /var/run/docker.sock:/var/run/docker.sock #optional
     ports:
       - 3000:3000
