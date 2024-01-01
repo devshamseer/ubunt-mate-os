@@ -1,6 +1,6 @@
 services:
   - name: webtop
-    image: lscr.io/linuxserver/webtop:ubuntu-mate
+    type: web
     envVars:
       - key: PUID
         value: "1000"
@@ -21,5 +21,11 @@ services:
     devices:
       - "/dev/dri:/dev/dri" # optional
     shmSize: "1gb" # optional
+    healthCheckPath: "/" # optional
+    skipClean: false # optional
+    disk: "256" # optional
+    plan: "free" # optional
+    repo: # optional
+    region: "us-east-1" # optional
     restartPolicy:
       unless-stopped
